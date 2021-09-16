@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screensaver</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="col1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eum ipsa
+      nam unde in error aliquid deleniti incidunt voluptatem vel, voluptatibus
+      dignissimos quis placeat rem veniam molestias consequuntur totam fugit
+      quasi. Placeat perspiciatis fuga necessitatibus voluptates distinctio
+      temporibus quaerat praesentium cumque, amet ipsum ea provident eveniet
+      debitis excepturi, nesciunt unde. Reiciendis deserunt perferendis sequi
+      repellat, atque minus sed deleniti, hic quaerat quis fugiat sapiente
+      excepturi quae, accusamus rem quia dolor. Consequatur perferendis, nulla
+      eligendi delectus minima voluptate quasi debitis eaque explicabo nemo
+      veritatis iure provident cum sapiente saepe, tempora fugiat aperiam
+      eveniet! Deleniti quidem aliquid porro quo quod quam maiores?
+    </div>
+    <div class="col2">
+      <div class="image">
+        <img src="img/patrick.jpg" alt="gambar" />
+        <div id="jam"></div>
+      </div>
+    </div>
+
+    <script>
+      var jam = document.getElementById("jam");
+
+      function time() {
+        var d = new Date();
+        var s = d.getSeconds();
+        var m = d.getMinutes();
+        var h = d.getHours();
+        jam.textContent =
+          ("0" + h).substr(-2) +
+          ":" +
+          ("0" + m).substr(-2) +
+          ":" +
+          ("0" + s).substr(-2);
+      }
+
+      setInterval(time, 1000);
+    </script>
+  </body>
+</html>

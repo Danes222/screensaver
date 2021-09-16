@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: teal;
+  display: flex;
+}
+img {
+  height: 35vh;
+  width: 35vh;
+}
+
+.col1 {
+  overflow: hidden;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 45px;
+}
+.col2 {
+  /* background-color: wheat; */
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#jam {
+  color: white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .image {
+    animation: App-logo-spin infinite 20s linear;
+  }
+  body {
+      animation: bg-chg infinite 20s linear;
+  }
+}
+
+@keyframes bg-chg {
+  0% {
+      background-color: teal;
+  }
+  25% {
+      background-color: crimson;
+  }
+  50% {
+      background-color: yellowgreen;
+  }
+  75% {
+      background-color: cornflowerblue;
+  }
+  100% {
+      background-color: teal;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+    /* transform: skewY(0deg); */
+  }
+  to {
+    transform: rotate(360deg);
+    /* transform: skewY(360deg); */
+  }
+}
