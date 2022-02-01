@@ -9,27 +9,42 @@
   </head>
   <body>
     <div class="col1">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eum ipsa
-      nam unde in error aliquid deleniti incidunt voluptatem vel, voluptatibus
-      dignissimos quis placeat rem veniam molestias consequuntur totam fugit
-      quasi. Placeat perspiciatis fuga necessitatibus voluptates distinctio
-      temporibus quaerat praesentium cumque, amet ipsum ea provident eveniet
-      debitis excepturi, nesciunt unde. Reiciendis deserunt perferendis sequi
-      repellat, atque minus sed deleniti, hic quaerat quis fugiat sapiente
-      excepturi quae, accusamus rem quia dolor. Consequatur perferendis, nulla
-      eligendi delectus minima voluptate quasi debitis eaque explicabo nemo
-      veritatis iure provident cum sapiente saepe, tempora fugiat aperiam
-      eveniet! Deleniti quidem aliquid porro quo quod quam maiores?
+      <p>"...Starman is a message of hope, it’s something that awaits us, and it’s more similar to us than what we can think. At the same time, it’s reassuring: it connects with our nature. It’s afraid to upset us, so it’s delicate, sincere. Starman is what young people feel, the new proposal, their future. It is a Bowie-proposed image that is assimilated by each of us. Everyone has their own starman." - Fabiana Falanga.</p>
     </div>
     <div class="col2">
-      <div class="image">
-        <img src="img/patrick.jpg" alt="gambar" />
-        <div id="jam"></div>
+      <div class="player">
+        <div class="menucont" onclick="showModal()">
+          <!-- <button onclick="showModal()" style="width: 3vh;height: 3vh; position: absolute; opacity: 0;"></button> -->
+          <a href="#">
+          <img class="menu" src="img/information-icon-white.jpg">
+          </a>
+        </div>
+        <div class="image" onclick="showModal()">
+          <img class="img" src="img/kindpng_1127413.png" alt="gambar" />
+          <!-- <div id="jam"></div> -->
+        </div>
+        <div class="text">
+          <h1>Heroes</h1>
+          <p>David Bowie</p>
+        </div>
+        <div class="control">
+          <iframe width="100%" height="200%" src="https://www.youtube.com/embed/vfud_kD-a08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- <iframe style="" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/51026436&color=%230066cc&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/matburrone" title="fisamat" target="_blank" style="color: #cccccc; text-decoration: none;">fisamat</a> · <a href="https://soundcloud.com/matburrone/david-bowie-starman" title="David Bowie- Starman" target="_blank" style="color: #cccccc; text-decoration: none;">David Bowie- Starman</a></div> -->
+        </div>
+      </div>
+
+      <div class="modal" id="modal">
+        <h2>Source Code</h2>
+        <a href="https://github.com/danes222/screensaver" target="blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="" style="height: 5vh; width: 5vh;">
+          <p>https://github.com/danes222/screensaver</p>
+        </a>
       </div>
     </div>
 
     <script>
       var jam = document.getElementById("jam");
+      var x = document.getElementById("modal");
 
       function time() {
         var d = new Date();
@@ -45,6 +60,14 @@
       }
 
       setInterval(time, 1000);
+
+      function showModal() {
+        if (x.style.display === "none") {
+          x.style.display = "flex";
+        } else {
+          x.style.display = "none";
+        }
+      }
     </script>
   </body>
 </html>

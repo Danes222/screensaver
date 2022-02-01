@@ -4,12 +4,65 @@
 body {
   height: 100%;
   width: 100%;
-  background-color: teal;
+  background-color: #0F0E0E;
   display: flex;
 }
-img {
-  height: 35vh;
-  width: 35vh;
+.img {
+  height: 30vh;
+  width: 30vh;
+}
+.cnt {
+  width: 40vh;
+}
+.text {
+  color: white;
+  margin-bottom: 15px;
+}
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  height: 40vh;
+  width: 40vh;
+  position: absolute;
+  box-shadow: 0px 0px 20px 2px #0F0E0E;
+  padding: 0 20px;
+}.modal a {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menucont {
+  margin-left: 35vh;
+  position: fixed;
+  float: right;
+}
+.menu {
+  height: 3vh;
+  width: 3vh;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding-bottom: 10vh;
+}
+.player {
+  background-color: white;
+  padding-top: 5vh;
+  height: 70%;
+  width: 50vh;
+  text-align: center;
+  overflow: hidden;
+  /*1234567890*/
+}
+.image{
 }
 
 .col1 {
@@ -17,10 +70,14 @@ img {
   width: 50%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 45px;
+  font-size: 30px;
+}
+.col1 p {
+  padding: 100px;
 }
 .col2 {
   /* background-color: wheat; */
@@ -36,10 +93,13 @@ img {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .image {
-    animation: App-logo-spin infinite 20s linear;
+  .img {
+    animation: App-logo-spin infinite 6s linear;
   }
-  body {
+  .player {
+      animation: bg-chg infinite 20s linear;
+  }
+  .control {
       animation: bg-chg infinite 20s linear;
   }
 }
